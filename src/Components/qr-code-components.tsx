@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 export default class QrCode extends Component {
   render(): ReactNode {
-    return <h1>Lorem, ipsum.</h1>;
+    return(
+      <div>
+        <h1>qr-code-component</h1>
+      </div>
+    )
   }
 }
