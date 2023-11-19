@@ -52,6 +52,7 @@ export const DesktopContainer = styled.div`
   top:50%;
   left:50%;
   transform:translate(-50%,-50%); 
+  
  `; 
 
 interface ImgQrProps {
@@ -66,12 +67,19 @@ const StyledImgQr = styled.img`
   margin-top: 20px;
 `;
 
-const Circle = styled.div`
-  width:100px;
-  height:100px;
-  background-color:#3498db;
+export const Circle1 = styled.div`
+  width:200px;
+  height:200px;
+  background-color:#3685FF;
   border-radius:50%;
+  position:absolute;
+  top:50%; 
+  left:50%; 
+  transform:translate(-50%,-50%);   
 `;
+
+export const Circle2 = styled(Circle1)`
+` ;
 
 class ImageQR extends Component<ImgQrProps> {
   render(): ReactNode {
@@ -95,9 +103,21 @@ export default class QrCode extends Component {
             </p>
           </ContentBox>
         </CardQR>
-        <Circle />
-        <Circle />
       </div>
     );
   }
 }
+
+// element for test to fine solution
+// export const Element1 = styled.div`
+//   position:absolute;
+//   width:100%;
+//   height:100%;
+//   // background-color:#3498db;
+//   background-color:green;
+// `;
+
+// export const Element2 = styled(Element1)`
+//   background-color:#e74c3c ; 
+//   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+// `;
