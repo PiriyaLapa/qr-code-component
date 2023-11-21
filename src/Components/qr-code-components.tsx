@@ -2,28 +2,32 @@ import { Component, ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 import qrUrl from "../img/qr-code.png";
 
-
 const CardQR = styled.div`
   border: 1px solid #979797;
   width: 320px;
   height: 497px;
   margin: 0 auto;
   border-radius: 18px;
-  background-color:white;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const QrBox = styled.div`
   width: 288px;
   height: 288px;
-  background-color: #2C7DFA;
+  background-color: #2c7dfa;
   border-radius: 18px;
   display: flex;
   justify-content: center;
   margin: 17px;
+
+  /* Mobile screen */
+  @media (max-width:375px){
+    background-color:#3685FF;
+  }
 `;
 const ContentBox = styled(QrBox)`
   height: auto;
@@ -48,17 +52,17 @@ export const Container = styled.div`
   width: 1400px;
   height: 800px;
   margin: 0 auto;
-   position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%); 
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   // Mobile size screen
-    @media (max-width:375px){
-      background-color:green;
-      height:667px;
-    }
- `; 
+  @media (max-width: 375px) {
+    /* background-color: green; */
+    height: 667px;
+  }
+`;
 
 interface ImgQrProps {
   imgUrl: string;
@@ -73,32 +77,41 @@ const StyledImgQr = styled.img`
 `;
 
 export const Circle1 = styled.div`
-  width:135px;
-  height:135px;
-  background-color:white;
-  opacity:0.089;
-  border-radius:50%;
-  position:absolute;
-  top:48.7%; 
-  left:55.51%; 
-  transform:translate(-50%,-50%);   
-  border: 1px solid red;
+  width: 135px;
+  height: 135px;
+  background-color: white ;
+  opacity: 0.089;
+  border-radius: 50%;
+  position: absolute;
+  top: 48.7%;
+  left: 55.51%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid ; */
 
-  // 1/4 circle 
-  border-top-left-radius:100%;
-  border-top-right-radius:0%;
-  border-bottom-left-radius:0;
-  border-bottom-right-radius:11%;
+  // 1/4 circle
+  border-top-left-radius: 100%;
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 11%;
+
+  @media(max-width:375px){
+    background-color:#2C7DFA;    
+    opacity:0.50;
+
+  }
 `;
 
+export const Circle2 = styled(Circle1)`
+  top: 21%;
+  left: 39.8%;
+  transform: rotate(180deg);
+  width: 150px;
+  height: 150px;
 
-export const Circle2 = styled(Circle1)` 
-  top:21%;
-  left:39.8%;
-  transform:rotate(180deg);
-  width:150px;
-  height:150px;
-` ;
+  @media (max-width: 375px) {
+    top: 15%;
+  }
+`;
 
 class ImageQR extends Component<ImgQrProps> {
   render(): ReactNode {
