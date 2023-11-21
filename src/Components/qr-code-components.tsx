@@ -68,17 +68,30 @@ const StyledImgQr = styled.img`
 `;
 
 export const Circle1 = styled.div`
-  width:200px;
-  height:200px;
-  background-color:#3685FF;
+  width:180px;
+  height:180px;
+  background-color:white;
+  // opacity:0.099;
   border-radius:50%;
   position:absolute;
-  top:50%; 
-  left:50%; 
+  top:55%; 
+  left:58%; 
   transform:translate(-50%,-50%);   
+
+  // test
+  border-top-left-radius:100%;
+  border-top-right-radius:0;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+
+
 `;
 
-export const Circle2 = styled(Circle1)`
+
+export const Circle2 = styled(Circle1)` 
+  top:25%;
+  left:43%;
+  // background-color:green;
 ` ;
 
 class ImageQR extends Component<ImgQrProps> {
