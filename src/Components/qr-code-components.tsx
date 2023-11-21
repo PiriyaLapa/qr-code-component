@@ -59,7 +59,6 @@ export const Container = styled.div`
 
   // Mobile size screen
   @media (max-width: 375px) {
-    /* background-color: green; */
     height: 667px;
   }
 `;
