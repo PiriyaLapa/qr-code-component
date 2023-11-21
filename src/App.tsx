@@ -1,15 +1,15 @@
 import { Component, ReactNode } from "react";
 import QrCode from "./Components/qr-code-components";
-import { DesktopContainer,Circle1, Circle2 } from "./Components/qr-code-components"; 
+import { Container, Circle1, Circle2 } from "./Components/qr-code-components";
 export default class App extends Component {
-  render():ReactNode {
+  render(): ReactNode {
     return (
       <div>
-        <DesktopContainer>
+        <Container>
           <QrCode />
-        <Circle1 />
-        <Circle2 />
-        </DesktopContainer>
+          <Circle1 />
+          <Circle2 />
+        </Container>
       </div>
     );
   }

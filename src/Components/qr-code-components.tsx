@@ -43,7 +43,7 @@ const ContentBox = styled(QrBox)`
   }
 `;
 
-export const DesktopContainer = styled.div`
+export const Container = styled.div`
   background-color: #d5e1ef;
   width: 1400px;
   height: 800px;
@@ -53,6 +53,11 @@ export const DesktopContainer = styled.div`
   left:50%;
   transform:translate(-50%,-50%); 
   
+  // Mobile size screen
+    @media (max-width:375px){
+      background-color:green;
+      height:667px;
+    }
  `; 
 
 interface ImgQrProps {
