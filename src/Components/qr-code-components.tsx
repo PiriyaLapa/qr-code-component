@@ -68,30 +68,31 @@ const StyledImgQr = styled.img`
 `;
 
 export const Circle1 = styled.div`
-  width:180px;
-  height:180px;
+  width:135px;
+  height:135px;
   background-color:white;
-  // opacity:0.099;
+  opacity:0.089;
   border-radius:50%;
   position:absolute;
-  top:55%; 
-  left:58%; 
+  top:48.7%; 
+  left:55.51%; 
   transform:translate(-50%,-50%);   
+  border: 1px solid red;
 
-  // test
+  // 1/4 circle 
   border-top-left-radius:100%;
-  border-top-right-radius:0;
+  border-top-right-radius:0%;
   border-bottom-left-radius:0;
-  border-bottom-right-radius:0;
-
-
+  border-bottom-right-radius:11%;
 `;
 
 
 export const Circle2 = styled(Circle1)` 
-  top:25%;
-  left:43%;
-  // background-color:green;
+  top:21%;
+  left:39.8%;
+  transform:rotate(180deg);
+  width:150px;
+  height:150px;
 ` ;
 
 class ImageQR extends Component<ImgQrProps> {
@@ -120,17 +121,3 @@ export default class QrCode extends Component {
     );
   }
 }
-
-// element for test to fine solution
-// export const Element1 = styled.div`
-//   position:absolute;
-//   width:100%;
-//   height:100%;
-//   // background-color:#3498db;
-//   background-color:green;
-// `;
-
-// export const Element2 = styled(Element1)`
-//   background-color:#e74c3c ; 
-//   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-// `;

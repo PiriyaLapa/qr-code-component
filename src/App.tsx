@@ -9,8 +9,6 @@ export default class App extends Component {
           <QrCode />
         <Circle1 />
         <Circle2 />
-          {/* <Element1 />
-          <Element2 /> */}
         </DesktopContainer>
       </div>
     );
