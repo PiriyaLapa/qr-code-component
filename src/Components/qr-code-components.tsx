@@ -1,4 +1,4 @@
-import { Component, ReactElement, ReactNode } from "react";
+import { Component,  ReactNode } from "react";
 import styled from "styled-components";
 import qrUrl from "../img/qr-code.png";
 
